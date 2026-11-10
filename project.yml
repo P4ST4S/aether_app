@@ -1,0 +1,63 @@
+name: Aether
+options:
+  bundleIdPrefix: com.aether.local
+  deploymentTarget:
+    macOS: '26.0'
+  xcodeVersion: '27.0'
+settings:
+  base:
+    SWIFT_VERSION: '6.0'
+    SWIFT_STRICT_CONCURRENCY: complete
+    MACOSX_DEPLOYMENT_TARGET: '26.0'
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+    CODE_SIGN_STYLE: Automatic
+    DEVELOPMENT_TEAM: ''
+targets:
+  Aether:
+    type: application
+    platform: macOS
+    sources:
+      - path: Aether
+        excludes: [Resources/Info.plist, Resources/Aether.entitlements]
+    info:
+      path: Aether/Resources/Info.plist
+      properties:
+        CFBundleDisplayName: Aether
+        LSUIElement: true
+        NSHumanReadableCopyright: Copyright © 2026 Aether
+        NSMicrophoneUsageDescription: Aether uses your microphone only when you start optional on-device dictation.
+        NSSpeechRecognitionUsageDescription: Aether transcribes speech on this Mac when on-device recognition is available.
+        NSAppTransportSecurity:
+          NSAllowsLocalNetworking: true
+    entitlements:
+      path: Aether/Resources/Aether.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.network.client: true
+        com.apple.security.device.audio-input: true
+        com.apple.security.personal-information.speech-recognition: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.aether.local.Aether
+        PRODUCT_NAME: Aether
+        MARKETING_VERSION: '1.0.0'
+        CURRENT_PROJECT_VERSION: 1
+        GENERATE_INFOPLIST_FILE: NO
+        ENABLE_HARDENED_RUNTIME: YES
+      configs:
+        Release:
+          CODE_SIGN_INJECT_BASE_ENTITLEMENTS: NO
+  AetherTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources: [AetherTests]
+    dependencies:
+      - target: Aether
+schemes:
+  Aether:
+    build:
+      targets:
+        Aether: all
+        AetherTests: [test]
+    test:
+      targets: [AetherTests]

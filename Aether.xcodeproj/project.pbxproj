@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0709E49E914C99281FA23403 /* StreamDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4632616F1B02F622CC995841 /* StreamDecoderTests.swift */; };
+		199B6E9F1CF1495C9F94130B /* PromptAndMarkdownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7763FAC7825E4AF656EFFF /* PromptAndMarkdownTests.swift */; };
+		2B08A868EFC611A320B71DCC /* OllamaClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F626ACF50B8FF825E4A952D4 /* OllamaClient.swift */; };
+		3145C2C3153F7DC605D30AC9 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6D44CD442C2DDEBB3064A7 /* Conversation.swift */; };
+		31DA195297D1FBCD48514C04 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF18BCF169DF1803FCD4473 /* ConversationView.swift */; };
+		39D7321FE485077587543CD0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1B89D786DB13D8F6A26593 /* SettingsView.swift */; };
+		43B88FBE445DD7EA15B92672 /* AppRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CFB3185B4BC60CCAF06CD0 /* AppRuntime.swift */; };
+		49243C9D29AFD7BF3DA979DF /* ConversationStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3982B3D6152DE2C5326499A /* ConversationStoreTests.swift */; };
+		4F8115E54553B6FB5FA434AC /* PromptBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8B5B21E805D5481D6F4402 /* PromptBuilder.swift */; };
+		50524EBAA2FAF6C44809053A /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37A435F368EA9527AF7881E /* AppSettings.swift */; };
+		56351FF7186D97CEBF3BDF81 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C6A18D2A17F3E46690FC04 /* HistoryView.swift */; };
+		6364D1847E50669AD1BC267E /* OllamaModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E489D04D8082A3B492BE755 /* OllamaModels.swift */; };
+		87734316A67E58DEBB263BAE /* SyntaxHighlightingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD79C2B2A09EDE410D443F12 /* SyntaxHighlightingTests.swift */; };
+		9565994DC20D72B905286A74 /* SpeechService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213E458CDE29A1D6E884D287 /* SpeechService.swift */; };
+		A789FB37BFEFA184CA62A8BB /* GlobalShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5205059CFF0120DABFA9AC2 /* GlobalShortcut.swift */; };
+		D336B4FF5F9E321B73ED4308 /* MarkdownContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A93FC561B84464D3CB7DC /* MarkdownContent.swift */; };
+		D57B5008174C589A815C630E /* AssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021691E0B0EFD42CA0A2952A /* AssistantView.swift */; };
+		DAC26C85CECB7807F3D09D90 /* SyntaxHighlighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8312E262A1D1C7FB501096 /* SyntaxHighlighting.swift */; };
+		EA6BEC4599227506A9579944 /* OrbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDAFFA3DD2780263E922FA3 /* OrbView.swift */; };
+		F2B7A8D6F06A772E6FCF6D26 /* AetherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AAD13316F912A08AB67052 /* AetherApp.swift */; };
+		F6805D6AA4440AC68E6E11F1 /* ConversationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F0FB336797EBA01180155C /* ConversationStore.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E3B7560C50BDABF098C6FF49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7C705F7C33D8C121C974109 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D59EF0ACCA124A422E890B70;
+			remoteInfo = Aether;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		021691E0B0EFD42CA0A2952A /* AssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantView.swift; sourceTree = "<group>"; };
+		213E458CDE29A1D6E884D287 /* SpeechService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechService.swift; sourceTree = "<group>"; };
+		21CFB3185B4BC60CCAF06CD0 /* AppRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRuntime.swift; sourceTree = "<group>"; };
+		2E489D04D8082A3B492BE755 /* OllamaModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OllamaModels.swift; sourceTree = "<group>"; };
+		4632616F1B02F622CC995841 /* StreamDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamDecoderTests.swift; sourceTree = "<group>"; };
+		5E7763FAC7825E4AF656EFFF /* PromptAndMarkdownTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptAndMarkdownTests.swift; sourceTree = "<group>"; };
+		74AAD13316F912A08AB67052 /* AetherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AetherApp.swift; sourceTree = "<group>"; };
+		8270BF316C06F5226265020C /* AetherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AetherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C1B89D786DB13D8F6A26593 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A3982B3D6152DE2C5326499A /* ConversationStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationStoreTests.swift; sourceTree = "<group>"; };
+		AD8312E262A1D1C7FB501096 /* SyntaxHighlighting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxHighlighting.swift; sourceTree = "<group>"; };
+		AF079DE4E9E495EEF6637D03 /* Aether.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aether.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B37A435F368EA9527AF7881E /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		B5205059CFF0120DABFA9AC2 /* GlobalShortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalShortcut.swift; sourceTree = "<group>"; };
+		B6F0FB336797EBA01180155C /* ConversationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationStore.swift; sourceTree = "<group>"; };
+		CA8B5B21E805D5481D6F4402 /* PromptBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptBuilder.swift; sourceTree = "<group>"; };
+		CDF18BCF169DF1803FCD4473 /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
+		DD79C2B2A09EDE410D443F12 /* SyntaxHighlightingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxHighlightingTests.swift; sourceTree = "<group>"; };
+		EA1A93FC561B84464D3CB7DC /* MarkdownContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownContent.swift; sourceTree = "<group>"; };
+		EC6D44CD442C2DDEBB3064A7 /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
+		EFDAFFA3DD2780263E922FA3 /* OrbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbView.swift; sourceTree = "<group>"; };
+		F626ACF50B8FF825E4A952D4 /* OllamaClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OllamaClient.swift; sourceTree = "<group>"; };
+		F7C6A18D2A17F3E46690FC04 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		01EBE4DD8916DF7BB0D0EAD5 /* Aether */ = {
+			isa = PBXGroup;
+			children = (
+				BF01D69CCFC5D10DCBD62537 /* App */,
+				099C352F423E2984433965C0 /* Models */,
+				984DA071728CC425F5BBE1CC /* Services */,
+				FD72573BB3807F9CE14692A5 /* State */,
+				A2C0BE802BE522838D6D8B7B /* Views */,
+			);
+			path = Aether;
+			sourceTree = "<group>";
+		};
+		099C352F423E2984433965C0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EC6D44CD442C2DDEBB3064A7 /* Conversation.swift */,
+				2E489D04D8082A3B492BE755 /* OllamaModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7CCE34B3C0A23C3EA91514B0 = {
+			isa = PBXGroup;
+			children = (
+				01EBE4DD8916DF7BB0D0EAD5 /* Aether */,
+				8B6BC689F2EC23526E7ACD78 /* AetherTests */,
+				8A93DD82B280EDA489D217FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8A93DD82B280EDA489D217FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF079DE4E9E495EEF6637D03 /* Aether.app */,
+				8270BF316C06F5226265020C /* AetherTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8B6BC689F2EC23526E7ACD78 /* AetherTests */ = {
+			isa = PBXGroup;
+			children = (
+				A3982B3D6152DE2C5326499A /* ConversationStoreTests.swift */,
+				5E7763FAC7825E4AF656EFFF /* PromptAndMarkdownTests.swift */,
+				4632616F1B02F622CC995841 /* StreamDecoderTests.swift */,
+				DD79C2B2A09EDE410D443F12 /* SyntaxHighlightingTests.swift */,
+			);
+			path = AetherTests;
+			sourceTree = "<group>";
+		};
+		984DA071728CC425F5BBE1CC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F626ACF50B8FF825E4A952D4 /* OllamaClient.swift */,
+				213E458CDE29A1D6E884D287 /* SpeechService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A2C0BE802BE522838D6D8B7B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				021691E0B0EFD42CA0A2952A /* AssistantView.swift */,
+				CDF18BCF169DF1803FCD4473 /* ConversationView.swift */,
+				F7C6A18D2A17F3E46690FC04 /* HistoryView.swift */,
+				EA1A93FC561B84464D3CB7DC /* MarkdownContent.swift */,
+				EFDAFFA3DD2780263E922FA3 /* OrbView.swift */,
+				9C1B89D786DB13D8F6A26593 /* SettingsView.swift */,
+				AD8312E262A1D1C7FB501096 /* SyntaxHighlighting.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BF01D69CCFC5D10DCBD62537 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				74AAD13316F912A08AB67052 /* AetherApp.swift */,
+				21CFB3185B4BC60CCAF06CD0 /* AppRuntime.swift */,
+				B5205059CFF0120DABFA9AC2 /* GlobalShortcut.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FD72573BB3807F9CE14692A5 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				B37A435F368EA9527AF7881E /* AppSettings.swift */,
+				B6F0FB336797EBA01180155C /* ConversationStore.swift */,
+				CA8B5B21E805D5481D6F4402 /* PromptBuilder.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22792331FFB2AF084F3BCB73 /* AetherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A78D2F369AB699EBE4832C4 /* Build configuration list for PBXNativeTarget "AetherTests" */;
+			buildPhases = (
+				75EC57A31C3D2C43BF39218F /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9E15A86AE28F670E9B97402D /* PBXTargetDependency */,
+			);
+			name = AetherTests;
+			packageProductDependencies = (
+			);
+			productName = AetherTests;
+			productReference = 8270BF316C06F5226265020C /* AetherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D59EF0ACCA124A422E890B70 /* Aether */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1098AD2A372F4DD2918AFFA /* Build configuration list for PBXNativeTarget "Aether" */;
+			buildPhases = (
+				E885CAA05B4AF3999B54E2C7 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Aether;
+			packageProductDependencies = (
+			);
+			productName = Aether;
+			productReference = AF079DE4E9E495EEF6637D03 /* Aether.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E7C705F7C33D8C121C974109 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					22792331FFB2AF084F3BCB73 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					D59EF0ACCA124A422E890B70 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = B356F83369813E0209654ED2 /* Build configuration list for PBXProject "Aether" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 7CCE34B3C0A23C3EA91514B0;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 8A93DD82B280EDA489D217FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D59EF0ACCA124A422E890B70 /* Aether */,
+				22792331FFB2AF084F3BCB73 /* AetherTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		75EC57A31C3D2C43BF39218F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49243C9D29AFD7BF3DA979DF /* ConversationStoreTests.swift in Sources */,
+				199B6E9F1CF1495C9F94130B /* PromptAndMarkdownTests.swift in Sources */,
+				0709E49E914C99281FA23403 /* StreamDecoderTests.swift in Sources */,
+				87734316A67E58DEBB263BAE /* SyntaxHighlightingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E885CAA05B4AF3999B54E2C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2B7A8D6F06A772E6FCF6D26 /* AetherApp.swift in Sources */,
+				43B88FBE445DD7EA15B92672 /* AppRuntime.swift in Sources */,
+				50524EBAA2FAF6C44809053A /* AppSettings.swift in Sources */,
+				D57B5008174C589A815C630E /* AssistantView.swift in Sources */,
+				3145C2C3153F7DC605D30AC9 /* Conversation.swift in Sources */,
+				F6805D6AA4440AC68E6E11F1 /* ConversationStore.swift in Sources */,
+				31DA195297D1FBCD48514C04 /* ConversationView.swift in Sources */,
+				A789FB37BFEFA184CA62A8BB /* GlobalShortcut.swift in Sources */,
+				56351FF7186D97CEBF3BDF81 /* HistoryView.swift in Sources */,
+				D336B4FF5F9E321B73ED4308 /* MarkdownContent.swift in Sources */,
+				2B08A868EFC611A320B71DCC /* OllamaClient.swift in Sources */,
+				6364D1847E50669AD1BC267E /* OllamaModels.swift in Sources */,
+				EA6BEC4599227506A9579944 /* OrbView.swift in Sources */,
+				4F8115E54553B6FB5FA434AC /* PromptBuilder.swift in Sources */,
+				39D7321FE485077587543CD0 /* SettingsView.swift in Sources */,
+				9565994DC20D72B905286A74 /* SpeechService.swift in Sources */,
+				DAC26C85CECB7807F3D09D90 /* SyntaxHighlighting.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9E15A86AE28F670E9B97402D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D59EF0ACCA124A422E890B70 /* Aether */;
+			targetProxy = E3B7560C50BDABF098C6FF49 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2F6C3D574530E70E89992C0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aether.local.AetherTests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aether.app/Contents/MacOS/Aether";
+			};
+			name = Debug;
+		};
+		535B5BBD68E34C96ECFC5644 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		8F65DEFA5F0FDB923D7B6E4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Aether/Resources/Aether.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Aether/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aether.local.Aether;
+				PRODUCT_NAME = Aether;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A06B1AE469CC01C0A7748EB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aether.local.AetherTests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aether.app/Contents/MacOS/Aether";
+			};
+			name = Release;
+		};
+		D117200E3E6E0A8910494FAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Aether/Resources/Aether.entitlements;
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Aether/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aether.local.Aether;
+				PRODUCT_NAME = Aether;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D31BFB8E8805FFAB029AB03F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6A78D2F369AB699EBE4832C4 /* Build configuration list for PBXNativeTarget "AetherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F6C3D574530E70E89992C0E /* Debug */,
+				A06B1AE469CC01C0A7748EB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A1098AD2A372F4DD2918AFFA /* Build configuration list for PBXNativeTarget "Aether" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F65DEFA5F0FDB923D7B6E4B /* Debug */,
+				D117200E3E6E0A8910494FAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B356F83369813E0209654ED2 /* Build configuration list for PBXProject "Aether" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D31BFB8E8805FFAB029AB03F /* Debug */,
+				535B5BBD68E34C96ECFC5644 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E7C705F7C33D8C121C974109 /* Project object */;
+}
