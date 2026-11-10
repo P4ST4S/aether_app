@@ -80,3 +80,9 @@ Start the Ollama application first, or run `OLLAMA_NO_CLOUD=1 ollama serve` in a
 - Release build and replacement installation to `/Applications/Aether.app` succeeded. Launched the installed application against its existing SwiftData store without a storage error.
 - End-to-end UI check: enabled Web with the globe, submitted a real site:swift.org query, and observed a completed French answer with two inline citations and a clickable “Swift Programming Language” source marked “Page read”. The selected local Huihui model generated 82 tokens at approximately 16.0 tokens/s. Web remains enabled after this check and can be disabled with the same globe.
 - Public RSS search is not a guaranteed commercial API; availability and relevance vary. The app shows retrieval failures explicitly and labels snippets when publisher pages cannot be read. A full relevance/long-session/site-compatibility evaluation was not performed.
+
+## 10 November 2026 — README demo
+
+- Captured genuine English coding and web conversations from the installed application using the selected Huihui model. The coding conversation implements a C word counter and refines whitespace handling and const correctness. The web conversation reads the Swift website and displays a clickable source labeled “Page read”.
+- Compiled the final captured C function with `-std=c17 -Wall -Wextra -Werror -Wcast-qual`. All nine assertion cases passed, covering NULL, empty/whitespace-only input, single and repeated words, all C whitespace categories, the four-word example, and a high-byte character.
+- The GIF and MP4 are assembled from actual app captures with waiting time shortened. They are not real-time benchmarks. Capture details are in [docs/media/README.md](docs/media/README.md).
