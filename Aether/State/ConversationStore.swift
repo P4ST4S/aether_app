@@ -12,6 +12,7 @@ final class ConversationStore {
     var draft = ""
     var isGenerating = false
     var isThinking = false
+    var webStatus: String?
     var errorMessage: String?
     var persistenceError: String?
     var installedModels: [LocalModel] = []
@@ -24,6 +25,7 @@ final class ConversationStore {
     @ObservationIgnored private var activeResponse: StoredMessage?
     @ObservationIgnored private var activeBuffer: ResponseBuffer?
     @ObservationIgnored private var lastCheckpoint = Date.distantPast
+    @ObservationIgnored private let webRetriever: any WebRetrieving
     @ObservationIgnored private let backendFactory: @MainActor (String) throws -> any InferenceBackend
 
     enum Connection: Equatable {
@@ -39,11 +41,13 @@ final class ConversationStore {
     }
 
     init(context: ModelContext, settings: AppSettings,
-         backendFactory: @escaping @MainActor (String) throws -> any InferenceBackend = { try OllamaClient(endpoint: $0) }) throws {
+         backendFactory: @escaping @MainActor (String) throws -> any InferenceBackend = { try OllamaClient(endpoint: $0) },
+         webRetriever: any WebRetrieving = WebResearchService()) throws {
         self.container = context.container
         self.context = context
         self.settings = settings
         self.backendFactory = backendFactory
+        self.webRetriever = webRetriever
         context.autosaveEnabled = false
         conversations = try context.fetch(FetchDescriptor<Conversation>(sortBy: [SortDescriptor(\Conversation.updatedAt, order: .reverse)]))
         for conversation in conversations {
@@ -99,6 +103,7 @@ final class ConversationStore {
             selected = conversation
         }
         let user = StoredMessage(role: "user", content: text, position: nextPosition(in: conversation))
+        user.webRequested = settings.webSearchEnabled
         conversation.messages.append(user)
         draft = ""
         startGeneration(in: conversation)
@@ -111,12 +116,14 @@ final class ConversationStore {
             conversation.messages.removeAll { $0.id == last.id }
             context.delete(last)
         }
+        conversation.orderedMessages.last(where: { $0.role == "user" })?.webRequested = settings.webSearchEnabled
         errorMessage = nil
         startGeneration(in: conversation)
     }
 
     private func startGeneration(in conversation: Conversation) {
         let response = StoredMessage(role: "assistant", position: nextPosition(in: conversation), state: "streaming", model: settings.model)
+        let useWeb = conversation.orderedMessages.last(where: { $0.role == "user" })?.webRequested ?? false
         let history = conversation.orderedMessages.filter { $0.role == "user" || $0.state == "complete" }
             .map { ChatMessage(role: $0.role, content: $0.content) }
         conversation.messages.append(response)
@@ -134,8 +141,27 @@ final class ConversationStore {
             guard let self else { return }
             do {
                 let options = settings.options
-                let messages = try PromptBuilder.messages(from: history, system: settings.systemPrompt,
-                                                          context: options.num_ctx, output: options.num_predict)
+                var sources: [WebSource] = []
+                if useWeb, let question = history.last?.content {
+                    webStatus = WebResearchService.urls(in: question).isEmpty ? "Searching the web…" : "Reading web pages…"
+                    sources = try await webRetriever.retrieve(for: question)
+                    try Task.checkCancellation()
+                    guard generationID == id else { return }
+                    guard !sources.isEmpty else { throw WebError.noResults }
+                    // Keep citation metadata in history; downloaded page bodies are transient.
+                    let references = sources.map { WebSource(id: $0.id, title: $0.title, url: $0.url, excerpt: "", kind: $0.kind, retrievedAt: $0.retrievedAt) }
+                    response.webSourcesJSON = try JSONEncoder().encode(references)
+                    webStatus = nil
+                    save()
+                }
+                let runtimePrompt = settings.systemPrompt + """
+
+                Application facts: you are Aether. Your exact local Ollama model identifier is \(settings.model). Do not guess a different model name.
+                You cannot see the screen, browser tabs, local files, or control this Mac. No computer-action tools are available.
+                \(sources.isEmpty ? "Web is off for this response. You have no live web evidence. Never simulate a search or pretend to have visited pages. If current web information is needed, ask the user to enable the globe button." : "Web excerpts are attached for this response. Answer from those excerpts and cite their supplied URLs.")
+                """
+                let messages = try PromptBuilder.messages(from: history, system: runtimePrompt,
+                                                          context: options.num_ctx, output: options.num_predict, webSources: sources)
                 let request = ChatRequest(model: settings.model, messages: messages, options: options,
                                           think: settings.model.lowercased().contains("qwen3") ? settings.enableThinking : nil)
                 let backend = try backendFactory(settings.endpoint)
@@ -160,6 +186,7 @@ final class ConversationStore {
             guard generationID == id else { return }
             isGenerating = false
             isThinking = false
+            webStatus = nil
             generationID = nil
             generationTask = nil
             activeResponse = nil
@@ -203,6 +230,7 @@ final class ConversationStore {
         }
         isGenerating = false
         isThinking = false
+        webStatus = nil
         save()
     }
 

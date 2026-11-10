@@ -39,6 +39,7 @@ struct AssistantView: View {
     private var phase: OrbView.Phase {
         if speech.isListening { return .listening }
         if store.errorMessage != nil { return .error }
+        if store.webStatus != nil { return .processing }
         if store.isGenerating { return store.isThinking || store.selected?.orderedMessages.last?.content.isEmpty == true ? .processing : .generating }
         return .idle
     }
@@ -158,6 +159,17 @@ struct AssistantView: View {
                 .padding(.vertical, 9)
             if !store.isGenerating {
                 Button {
+                    runtime.settings.webSearchEnabled.toggle()
+                } label: {
+                    Image(systemName: runtime.settings.webSearchEnabled ? "globe.badge.chevron.backward" : "globe")
+                        .foregroundStyle(runtime.settings.webSearchEnabled ? .indigo : .secondary)
+                        .frame(width: 18, height: 24)
+                }
+                .buttonStyle(.glass)
+                .help(runtime.settings.webSearchEnabled ? "Web on — this question is sent to Bing, or its URLs are read directly" : "Enable web search")
+                .accessibilityLabel(runtime.settings.webSearchEnabled ? "Disable web search" : "Enable web search")
+                .accessibilityValue(runtime.settings.webSearchEnabled ? "On" : "Off")
+                Button {
                     if speech.isListening || speech.isRequestingPermissions { speech.stopListening() }
                     else {
                         let prefix = store.draft.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -198,7 +210,7 @@ struct AssistantView: View {
     private var footer: some View {
         HStack(spacing: 5) {
             Image(systemName: "lock.shield").font(.system(size: 10))
-            Text(store.isGenerating ? (store.isThinking ? "Processing locally…" : "Generating locally…") : store.connection.title)
+            Text(store.webStatus ?? (store.isGenerating ? (store.isThinking ? "Processing locally…" : "Generating locally…") : runtime.settings.webSearchEnabled ? "Web on · local AI" : store.connection.title))
             Spacer()
             if speech.isSpeaking {
                 Button("Stop speaking") { speech.stopAll() }.buttonStyle(.borderless)

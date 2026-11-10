@@ -32,6 +32,13 @@ final class StoredMessage {
     var tokenCount: Int?
     var tokensPerSecond: Double?
     var finishReason: String?
+    var webRequested: Bool = false
+    var webSourcesJSON: Data? = nil
+
+    var webSources: [WebSource] {
+        guard let webSourcesJSON else { return [] }
+        return (try? JSONDecoder().decode([WebSource].self, from: webSourcesJSON)) ?? []
+    }
     var conversation: Conversation?
 
     init(role: String, content: String = "", position: Int, state: String = "complete", model: String = "") {

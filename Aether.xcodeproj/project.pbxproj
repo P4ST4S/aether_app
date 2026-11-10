@@ -17,17 +17,25 @@
 		49243C9D29AFD7BF3DA979DF /* ConversationStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3982B3D6152DE2C5326499A /* ConversationStoreTests.swift */; };
 		4F8115E54553B6FB5FA434AC /* PromptBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8B5B21E805D5481D6F4402 /* PromptBuilder.swift */; };
 		50524EBAA2FAF6C44809053A /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37A435F368EA9527AF7881E /* AppSettings.swift */; };
+		54AEACC3A034DD8BD15B9AB6 /* WebResearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AAE5CF9357E276C5774AEA /* WebResearchService.swift */; };
 		56351FF7186D97CEBF3BDF81 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C6A18D2A17F3E46690FC04 /* HistoryView.swift */; };
 		6364D1847E50669AD1BC267E /* OllamaModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E489D04D8082A3B492BE755 /* OllamaModels.swift */; };
+		872F57675317B3D4E6E556A7 /* ThirdPartyNotices.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8148E1A7932FE0B751B6BE94 /* ThirdPartyNotices.txt */; };
 		87734316A67E58DEBB263BAE /* SyntaxHighlightingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD79C2B2A09EDE410D443F12 /* SyntaxHighlightingTests.swift */; };
 		9565994DC20D72B905286A74 /* SpeechService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213E458CDE29A1D6E884D287 /* SpeechService.swift */; };
+		9E6EDED8E588657281641D0D /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 2881CFEB7167005A4366A67A /* SwiftSoup */; };
 		A789FB37BFEFA184CA62A8BB /* GlobalShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5205059CFF0120DABFA9AC2 /* GlobalShortcut.swift */; };
+		B1C51CE83634976B870106BF /* PublicWebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D4B015550865184FBA590E /* PublicWebClient.swift */; };
 		D336B4FF5F9E321B73ED4308 /* MarkdownContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A93FC561B84464D3CB7DC /* MarkdownContent.swift */; };
 		D57B5008174C589A815C630E /* AssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021691E0B0EFD42CA0A2952A /* AssistantView.swift */; };
 		DAC26C85CECB7807F3D09D90 /* SyntaxHighlighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8312E262A1D1C7FB501096 /* SyntaxHighlighting.swift */; };
+		E2849B7612342227A66D4450 /* WebConversationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDC79CEC982318488A5CA9D /* WebConversationTests.swift */; };
 		EA6BEC4599227506A9579944 /* OrbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDAFFA3DD2780263E922FA3 /* OrbView.swift */; };
+		EC62D7FA3E9EC4BC8D07D4A3 /* LiveWebTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8140DA31914DA898B49413B /* LiveWebTests.swift */; };
+		F26FA52C3A3CDBC93B9635C3 /* WebResearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493EE25D4FEC8520C8F4FD49 /* WebResearchTests.swift */; };
 		F2B7A8D6F06A772E6FCF6D26 /* AetherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AAD13316F912A08AB67052 /* AetherApp.swift */; };
 		F6805D6AA4440AC68E6E11F1 /* ConversationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F0FB336797EBA01180155C /* ConversationStore.swift */; };
+		F8EE88A148E77A7701E4E443 /* WebSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0001BEEC103FE3A96C22F553 /* WebSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,16 +49,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0001BEEC103FE3A96C22F553 /* WebSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSource.swift; sourceTree = "<group>"; };
 		021691E0B0EFD42CA0A2952A /* AssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantView.swift; sourceTree = "<group>"; };
+		12D4B015550865184FBA590E /* PublicWebClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicWebClient.swift; sourceTree = "<group>"; };
 		213E458CDE29A1D6E884D287 /* SpeechService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechService.swift; sourceTree = "<group>"; };
 		21CFB3185B4BC60CCAF06CD0 /* AppRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRuntime.swift; sourceTree = "<group>"; };
 		2E489D04D8082A3B492BE755 /* OllamaModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OllamaModels.swift; sourceTree = "<group>"; };
+		36AAE5CF9357E276C5774AEA /* WebResearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebResearchService.swift; sourceTree = "<group>"; };
+		3EDC79CEC982318488A5CA9D /* WebConversationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebConversationTests.swift; sourceTree = "<group>"; };
 		4632616F1B02F622CC995841 /* StreamDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamDecoderTests.swift; sourceTree = "<group>"; };
+		493EE25D4FEC8520C8F4FD49 /* WebResearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebResearchTests.swift; sourceTree = "<group>"; };
 		5E7763FAC7825E4AF656EFFF /* PromptAndMarkdownTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptAndMarkdownTests.swift; sourceTree = "<group>"; };
 		74AAD13316F912A08AB67052 /* AetherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AetherApp.swift; sourceTree = "<group>"; };
+		8148E1A7932FE0B751B6BE94 /* ThirdPartyNotices.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ThirdPartyNotices.txt; sourceTree = "<group>"; };
 		8270BF316C06F5226265020C /* AetherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AetherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C1B89D786DB13D8F6A26593 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A3982B3D6152DE2C5326499A /* ConversationStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationStoreTests.swift; sourceTree = "<group>"; };
+		A8140DA31914DA898B49413B /* LiveWebTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveWebTests.swift; sourceTree = "<group>"; };
 		AD8312E262A1D1C7FB501096 /* SyntaxHighlighting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxHighlighting.swift; sourceTree = "<group>"; };
 		AF079DE4E9E495EEF6637D03 /* Aether.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aether.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B37A435F368EA9527AF7881E /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
@@ -66,12 +81,24 @@
 		F7C6A18D2A17F3E46690FC04 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFrameworksBuildPhase section */
+		5046DF9BFF3D37DCD73624CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E6EDED8E588657281641D0D /* SwiftSoup in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
 		01EBE4DD8916DF7BB0D0EAD5 /* Aether */ = {
 			isa = PBXGroup;
 			children = (
 				BF01D69CCFC5D10DCBD62537 /* App */,
 				099C352F423E2984433965C0 /* Models */,
+				3AEE7BFDD7606C3915B94B6A /* Resources */,
 				984DA071728CC425F5BBE1CC /* Services */,
 				FD72573BB3807F9CE14692A5 /* State */,
 				A2C0BE802BE522838D6D8B7B /* Views */,
@@ -84,8 +111,17 @@
 			children = (
 				EC6D44CD442C2DDEBB3064A7 /* Conversation.swift */,
 				2E489D04D8082A3B492BE755 /* OllamaModels.swift */,
+				0001BEEC103FE3A96C22F553 /* WebSource.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3AEE7BFDD7606C3915B94B6A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8148E1A7932FE0B751B6BE94 /* ThirdPartyNotices.txt */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		7CCE34B3C0A23C3EA91514B0 = {
@@ -110,9 +146,12 @@
 			isa = PBXGroup;
 			children = (
 				A3982B3D6152DE2C5326499A /* ConversationStoreTests.swift */,
+				A8140DA31914DA898B49413B /* LiveWebTests.swift */,
 				5E7763FAC7825E4AF656EFFF /* PromptAndMarkdownTests.swift */,
 				4632616F1B02F622CC995841 /* StreamDecoderTests.swift */,
 				DD79C2B2A09EDE410D443F12 /* SyntaxHighlightingTests.swift */,
+				3EDC79CEC982318488A5CA9D /* WebConversationTests.swift */,
+				493EE25D4FEC8520C8F4FD49 /* WebResearchTests.swift */,
 			);
 			path = AetherTests;
 			sourceTree = "<group>";
@@ -121,7 +160,9 @@
 			isa = PBXGroup;
 			children = (
 				F626ACF50B8FF825E4A952D4 /* OllamaClient.swift */,
+				12D4B015550865184FBA590E /* PublicWebClient.swift */,
 				213E458CDE29A1D6E884D287 /* SpeechService.swift */,
+				36AAE5CF9357E276C5774AEA /* WebResearchService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -186,6 +227,8 @@
 			buildConfigurationList = A1098AD2A372F4DD2918AFFA /* Build configuration list for PBXNativeTarget "Aether" */;
 			buildPhases = (
 				E885CAA05B4AF3999B54E2C7 /* Sources */,
+				54FC1522C074745B3897AA41 /* Resources */,
+				5046DF9BFF3D37DCD73624CE /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -193,6 +236,7 @@
 			);
 			name = Aether;
 			packageProductDependencies = (
+				2881CFEB7167005A4366A67A /* SwiftSoup */,
 			);
 			productName = Aether;
 			productReference = AF079DE4E9E495EEF6637D03 /* Aether.app */;
@@ -226,6 +270,9 @@
 			);
 			mainGroup = 7CCE34B3C0A23C3EA91514B0;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				99DD160C81551A4934FBD50A /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8A93DD82B280EDA489D217FB /* Products */;
 			projectDirPath = "";
@@ -237,15 +284,29 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		54FC1522C074745B3897AA41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				872F57675317B3D4E6E556A7 /* ThirdPartyNotices.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		75EC57A31C3D2C43BF39218F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				49243C9D29AFD7BF3DA979DF /* ConversationStoreTests.swift in Sources */,
+				EC62D7FA3E9EC4BC8D07D4A3 /* LiveWebTests.swift in Sources */,
 				199B6E9F1CF1495C9F94130B /* PromptAndMarkdownTests.swift in Sources */,
 				0709E49E914C99281FA23403 /* StreamDecoderTests.swift in Sources */,
 				87734316A67E58DEBB263BAE /* SyntaxHighlightingTests.swift in Sources */,
+				E2849B7612342227A66D4450 /* WebConversationTests.swift in Sources */,
+				F26FA52C3A3CDBC93B9635C3 /* WebResearchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,9 +328,12 @@
 				6364D1847E50669AD1BC267E /* OllamaModels.swift in Sources */,
 				EA6BEC4599227506A9579944 /* OrbView.swift in Sources */,
 				4F8115E54553B6FB5FA434AC /* PromptBuilder.swift in Sources */,
+				B1C51CE83634976B870106BF /* PublicWebClient.swift in Sources */,
 				39D7321FE485077587543CD0 /* SettingsView.swift in Sources */,
 				9565994DC20D72B905286A74 /* SpeechService.swift in Sources */,
 				DAC26C85CECB7807F3D09D90 /* SyntaxHighlighting.swift in Sources */,
+				54AEACC3A034DD8BD15B9AB6 /* WebResearchService.swift in Sources */,
+				F8EE88A148E77A7701E4E443 /* WebSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +581,25 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		99DD160C81551A4934FBD50A /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.14.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2881CFEB7167005A4366A67A /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 99DD160C81551A4934FBD50A /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E7C705F7C33D8C121C974109 /* Project object */;
 }

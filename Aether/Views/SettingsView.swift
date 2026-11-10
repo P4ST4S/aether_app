@@ -9,6 +9,8 @@ struct SettingsView: View {
                 .tabItem { Label("Local AI", systemImage: "cpu") }.tag(0)
             GeneralSettingsView(runtime: runtime)
                 .tabItem { Label("General", systemImage: "slider.horizontal.3") }.tag(1)
+            WebSettingsView(settings: runtime.settings)
+                .tabItem { Label("Web", systemImage: "globe") }.tag(3)
             HistorySettingsView(store: runtime.store)
                 .tabItem { Label("History", systemImage: "clock") }.tag(2)
         }
@@ -154,5 +156,28 @@ struct HistorySettingsView: View {
         .confirmationDialog("Delete all conversations?", isPresented: $confirmDelete, titleVisibility: .visible) {
             Button("Delete All Conversations", role: .destructive) { store?.deleteAll() }
         } message: { Text("All conversation history on this Mac will be permanently removed. Active generation will stop.") }
+    }
+}
+
+
+struct WebSettingsView: View {
+    @Bindable var settings: AppSettings
+    var body: some View {
+        Form {
+            Section("Web access") {
+                Toggle("Use web sources for new messages", isOn: $settings.webSearchEnabled)
+                Text("You can also toggle Web with the globe next to the message field. It is off by default, so normal chat works offline.")
+                    .font(.callout).foregroundStyle(.secondary)
+            }
+            Section("Search and page reading") {
+                LabeledContent("Search provider", value: "Bing public RSS search")
+                Text("When Web is on, the current question is sent to Bing. Earlier conversation messages and your system prompt are not sent to the search engine. Paste a public HTTPS URL to read it directly instead of searching. The selected local model writes the answer from the retrieved text.")
+                Text("Sources appear under each answer. Aether distinguishes pages it read from search excerpts when a site blocks reading. Public search can be unavailable or return irrelevant results; try a more precise query or a direct URL.")
+            }
+            Section("Limits") {
+                Text("Text pages only: no JavaScript, login, cookies, remote images, PDF downloads, or local-network access. Up to three sources are read per question, with bounded downloads and excerpts. A failed search is shown as an error, rather than silently answering as if it succeeded.")
+                    .foregroundStyle(.secondary)
+            }
+        }.formStyle(.grouped)
     }
 }

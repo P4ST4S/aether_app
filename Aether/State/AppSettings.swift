@@ -10,6 +10,7 @@ final class AppSettings {
     var contextLength: Int { didSet { defaults.set(contextLength, forKey: "contextLength") } }
     var temperature: Double { didSet { defaults.set(temperature, forKey: "temperature") } }
     var responseLimit: Int { didSet { defaults.set(responseLimit, forKey: "responseLimit") } }
+    var webSearchEnabled: Bool { didSet { defaults.set(webSearchEnabled, forKey: "webSearchEnabled") } }
     var enableThinking: Bool { didSet { defaults.set(enableThinking, forKey: "enableThinking") } }
     var systemPrompt: String { didSet { defaults.set(systemPrompt, forKey: "systemPrompt") } }
     var appearance: String { didSet { defaults.set(appearance, forKey: "appearance") } }
@@ -24,6 +25,7 @@ final class AppSettings {
         contextLength = defaults.object(forKey: "contextLength") as? Int ?? 8192
         temperature = defaults.object(forKey: "temperature") as? Double ?? 0.6
         responseLimit = defaults.object(forKey: "responseLimit") as? Int ?? 2048
+        webSearchEnabled = defaults.object(forKey: "webSearchEnabled") as? Bool ?? false
         enableThinking = defaults.object(forKey: "enableThinking") as? Bool ?? false
         systemPrompt = defaults.string(forKey: "systemPrompt") ?? "You are Aether, a helpful, thoughtful assistant running locally on the user's Mac. Be clear, accurate, and concise. Reply in the user's language."
         appearance = defaults.string(forKey: "appearance") ?? "system"

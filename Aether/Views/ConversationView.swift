@@ -10,7 +10,8 @@ struct ConversationView: View {
             ScrollView {
                 LazyVStack(alignment: .leading, spacing: 26) {
                     ForEach(store.selected?.orderedMessages ?? []) { message in
-                        MessageView(message: message, isThinking: store.isThinking && message.state == "streaming")
+                        MessageView(message: message, isThinking: store.isThinking && message.state == "streaming",
+                                    webStatus: message.state == "streaming" ? store.webStatus : nil)
                             .id(message.id)
                     }
                     Color.clear.frame(height: 1).id("bottom")
@@ -50,6 +51,7 @@ struct ConversationView: View {
 struct MessageView: View {
     let message: StoredMessage
     let isThinking: Bool
+    var webStatus: String? = nil
     private var isUser: Bool { message.role == "user" }
 
     var body: some View {
@@ -75,11 +77,30 @@ struct MessageView: View {
             } else if message.content.isEmpty, message.state == "streaming" {
                 HStack(spacing: 9) {
                     ProgressView().controlSize(.small)
-                    Text(isThinking ? "Working through your question…" : "Loading model…")
+                    Text(webStatus ?? (isThinking ? "Working through your question…" : "Loading model…"))
                         .font(.callout).foregroundStyle(.secondary)
                 }
             } else {
                 MarkdownContent(text: message.content)
+            }
+            if !message.webSources.isEmpty {
+                VStack(alignment: .leading, spacing: 7) {
+                    Text("WEB SOURCES").font(.system(size: 10, weight: .semibold)).tracking(1).foregroundStyle(.secondary)
+                    ForEach(message.webSources) { source in
+                        Link(destination: source.url) {
+                            HStack(alignment: .firstTextBaseline, spacing: 7) {
+                                Text("[\(source.id)]").monospacedDigit()
+                                VStack(alignment: .leading, spacing: 2) {
+                                    Text(source.title).lineLimit(2)
+                                    Text("\(source.url.host ?? "") · \(source.kind == .page ? "Page read" : "Search excerpt only")")
+                                        .font(.system(size: 10)).foregroundStyle(.secondary)
+                                }
+                            }
+                        }
+                        .font(.caption)
+                        .accessibilityLabel("Source \(source.id), \(source.title), \(source.kind == .page ? "page read" : "search excerpt only")")
+                    }
+                }.padding(.top, 5)
             }
             if message.state == "stopped" || message.state == "failed" {
                 Text(message.state == "stopped" ? "Response interrupted" : "Response incomplete — use Retry or Regenerate")
